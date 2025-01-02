@@ -1,1 +1,1 @@
-## ilhomlandim.uz
+## codenur.uz

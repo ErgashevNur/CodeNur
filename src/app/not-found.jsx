@@ -32,10 +32,14 @@ export default function NotFound() {
               chashka kofe oling ☕, juda qiziq bo'ladi!
             </p>
           </div>
-          <img src="/look-my-work.webp" alt="" className="w-full rounded-3xl" />
+          <img
+            src="/look-my-work.webp"
+            alt="codenur"
+            className="w-72 rounded-3xl"
+          />
         </div>
 
-        <div className="max-w-[1060px] mx-auto gap-10 flex flex-wrap justify-center">
+        <div className="max-w-[1060px] mx-auto flex-col justify-center items-center grid gap-x-32 gap-y-10 rid-cols-1 xl:grid-cols-2">
           <div className="relative group w-[500px] rounded-xl">
             <img
               src="/project-bg.jpg"
@@ -43,7 +47,10 @@ export default function NotFound() {
               className="h-auto max-w-[100%] w-[100%] rounded-xl"
             />
             <div className="absolute inset-0 flex items-center justify-center space-x-4 opacity-0 group-hover:opacity-100 bg-black bg-opacity-50">
-              <a target="_blank" href="https://shisui-q2oo.vercel.app/">
+              <a
+                target="_blank"
+                href="https://twitter-clone-virid-three.vercel.app/"
+              >
                 <i className="fas fa-eye text-white text-xl">
                   <FaEye />
                 </i>
@@ -69,7 +76,7 @@ export default function NotFound() {
                       </Label>
                       <Input
                         id="link"
-                        defaultValue="https://shisui-q2oo.vercel.app/"
+                        defaultValue="https://twitter-clone-virid-three.vercel.app/"
                         readOnly
                       />
                     </div>
@@ -88,7 +95,10 @@ export default function NotFound() {
                 </DialogContent>
               </Dialog>
 
-              <a target="_blank" href="https://github.com/ErgashevNur/shisui">
+              <a
+                target="_blank"
+                href="https://github.com/ErgashevNur/Twitter-clone"
+              >
                 <i className="fab fa-github text-white text-xl">
                   <FaGithub />
                 </i>

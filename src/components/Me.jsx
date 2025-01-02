@@ -15,7 +15,7 @@ export default function Me() {
               src={MeImg}
               width={100}
               height={100}
-              alt="MuhammadNurulloh"
+              alt="codenur"
               priority
               unoptimized
             />
@@ -24,10 +24,13 @@ export default function Me() {
                 MuhammadNurulloh
               </h2>
               <p className="text-slate-500 text-lg font-medium mb-2 sm:text-2xl">
-                <a href="https://najottalim.uz" target="_blank">
-                  Najot Ta'limda
+                <a
+                  href="https://www.google.com/search?q=front-end+developer+%D1%87%D1%82%D0%BE+%D0%B4%D0%B5%D0%BB%D0%B0%D0%B5%D1%82&client=ubuntu-chr&hs=kq8&sca_esv=ec4e310bc6b52ebd&sxsrf=ADLYWIJlV0cAG-fqXvYBocOuH-Zq2iy2Nw%3A1736950557525&ei=HcOHZ67nH-uxwPAPvJyEqAM&oq=frontend+who&gs_lp=Egxnd3Mtd2l6LXNlcnAiDGZyb250ZW5kIHdobyoCCAEyBxAjGLADGCcyChAAGLADGNYEGEcyChAAGLADGNYEGEcyChAAGLADGNYEGEcyChAAGLADGNYEGEcyChAAGLADGNYEGEcyChAAGLADGNYEGEcyChAAGLADGNYEGEcyChAAGLADGNYEGEdI_zhQAFgAcAF4AJABAJgBfKABfKoBAzAuMbgBA8gBAJgCAaACCZgDAIgGAZAGCZIHATGgB6sF&sclient=gws-wiz-serp"
+                  target="_blank"
+                >
+                  FrontEnd
                 </a>{" "}
-                o'quvchi
+                dasturchi
               </p>
               <Social />
             </div>
