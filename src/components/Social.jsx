@@ -74,7 +74,7 @@ export default function Social() {
                 size: "icon",
               })} scale-[80%]`}
               onClick={() => {
-                window?.open("dodgechalanger9@gmail.com");
+                window?.open("mailto:dodgechalanger9@gmail.com");
               }}
             >
               <svg
