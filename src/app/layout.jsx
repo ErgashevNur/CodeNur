@@ -11,7 +11,7 @@ export const metadata = {
 export default function RootLayout({ children }) {
   return (
     <html className="h-full" lang="uz">
-      <body className="bg-body bg-no-repeat bg-cover h-full flex flex-col font-source-sans font-normal">
+      <body className="bg-body bg-no-repeat bg-cover min-h-screen flex flex-col font-source-sans font-normal overflow-auto">
         <Header />
         <main className="grow">{children}</main>
         <Footer />

@@ -15,7 +15,7 @@ export default function Me() {
               src={MeImg}
               width={100}
               height={100}
-              alt="Mirzo Ulug'bek"
+              alt="MuhammadNurulloh"
               priority
               unoptimized
             />

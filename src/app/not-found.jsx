@@ -2,55 +2,93 @@ import Image from "next/image";
 import Link from "next/link";
 import { buttonVariants } from "@/components/ui/button";
 import { FaEye, FaLink, FaGithub } from "react-icons/fa";
+import { Copy } from "lucide-react";
+
+import { Button } from "@/components/ui/button";
+import {
+  Dialog,
+  DialogClose,
+  DialogContent,
+  DialogDescription,
+  DialogFooter,
+  DialogHeader,
+  DialogTitle,
+  DialogTrigger,
+} from "@/components/ui/dialog";
+import { Input } from "@/components/ui/input";
+import { Label } from "@/components/ui/label";
 
 export default function NotFound() {
   return (
     <div className="">
-      <div className="container mx-auto px-5 mt-16 max-w-[1100px]">
-        <div className="flex items-center max-w-[600px] mx-auto mb-10">
-          <div className="flex flex-col">
-            <h1 className="text-2xl mb-2">
-              Yozgan barcha loyhalarimni ko'rmoqchimisiz...
+      <div className="container mx-auto px-10 mt-16 max-w-[1100px]">
+        <div className="flex flex-col max-w-[600px] mx-auto mb-20 sm:items-center">
+          <div className="flex flex-col text-center">
+            <h1 className="text-2xl mb-2 font-bold">
+              Yozgan barcha loyhalarimni ko'rmoqchimisiz ???
             </h1>
-            <p className="mb-4">
+            <p className="mb-4 text-base">
               Sizni hayratda qoldirish uchun tayyorlandim! Lekin avval bir
               chashka kofe oling ☕, juda qiziq bo'ladi!
             </p>
           </div>
-          <img
-            src="/f397a2d4003558c6068fd9ed96c29001.jpg"
-            alt=""
-            className="h-60 w-60 rounded-3xl"
-          />
+          <img src="/look-my-work.webp" alt="" className="w-full rounded-3xl" />
         </div>
-        <div className="grid grid-cols-2 gap-16 max-w-[1000px]">
+
+        <div className="max-w-[1060px] mx-auto gap-10 flex flex-wrap justify-center">
           <div className="relative group w-[500px] rounded-xl">
-            <img src="/project-bg.jpg" alt="Image" className="h-auto" />
+            <img
+              src="/project-bg.jpg"
+              alt="Image"
+              className="h-auto max-w-[100%] w-[100%] rounded-xl"
+            />
             <div className="absolute inset-0 flex items-center justify-center space-x-4 opacity-0 group-hover:opacity-100 bg-black bg-opacity-50">
-              <a href="shisui-q2oo.vercel.app">
+              <a target="_blank" href="https://shisui-q2oo.vercel.app/">
                 <i className="fas fa-eye text-white text-xl">
                   <FaEye />
                 </i>
               </a>
 
-              <button className="btn">
-                <i className="fas fa-link text-white text-xl">
-                  <FaLink />
-                </i>
-              </button>
-
-              <dialog id="Link" className="modal">
-                <div className="modal-box">
-                  <div className="modal-action">
-                    <a href="shisui-q2oo.vercel.app">shisui-q2oo.vercel.app</a>
-                    <form method="dialog">
-                      <button className="btn">Yopish</button>
-                    </form>
+              <Dialog>
+                <DialogTrigger asChild>
+                  <Button variant="">
+                    <FaLink />
+                  </Button>
+                </DialogTrigger>
+                <DialogContent className="sm:max-w-md">
+                  <DialogHeader>
+                    <DialogTitle>Linkni Nusxalash</DialogTitle>
+                    <DialogDescription>
+                      Bu men ochgan saytimning linki.
+                    </DialogDescription>
+                  </DialogHeader>
+                  <div className="flex items-center space-x-2">
+                    <div className="grid flex-1 gap-2">
+                      <Label htmlFor="link" className="sr-only">
+                        Link
+                      </Label>
+                      <Input
+                        id="link"
+                        defaultValue="https://shisui-q2oo.vercel.app/"
+                        readOnly
+                      />
+                    </div>
+                    <Button type="submit" size="sm" className="px-3">
+                      <span className="sr-only">Nusxalash</span>
+                      <Copy />
+                    </Button>
                   </div>
-                </div>
-              </dialog>
+                  <DialogFooter className="sm:justify-start">
+                    <DialogClose asChild>
+                      <Button type="button" variant="secondary">
+                        Yopish
+                      </Button>
+                    </DialogClose>
+                  </DialogFooter>
+                </DialogContent>
+              </Dialog>
 
-              <a href="https://github.com/ErgashevNur/shisui">
+              <a target="_blank" href="https://github.com/ErgashevNur/shisui">
                 <i className="fab fa-github text-white text-xl">
                   <FaGithub />
                 </i>
@@ -58,152 +96,433 @@ export default function NotFound() {
             </div>
           </div>
 
-          {/* <div className="relative group w-[500px]">
-            <img src="/game.jpg" alt="Image" className="h-auto" />
+          <div className="relative group w-[500px]">
+            <img src="/game.jpg" alt="Image" className="h-auto rounded-xl" />
             <div className="absolute inset-0 flex items-center justify-center space-x-4 opacity-0 group-hover:opacity-100 bg-black bg-opacity-50">
-              <Link href="">
+              <a target="_blank" href="https://ergashev-s.vercel.app/">
                 <i className="fas fa-eye text-white text-xl">
                   <FaEye />
                 </i>
-              </Link>
-              <Link href="">
-                <i className="fas fa-link text-white text-xl">
-                  <FaLink />
-                </i>
-              </Link>
-              <Link href="">
+              </a>
+
+              <Dialog>
+                <DialogTrigger asChild>
+                  <Button variant="">
+                    <FaLink />
+                  </Button>
+                </DialogTrigger>
+                <DialogContent className="sm:max-w-md">
+                  <DialogHeader>
+                    <DialogTitle>Linkni Nusxalash</DialogTitle>
+                    <DialogDescription>
+                      Bu men ochgan saytimning linki.
+                    </DialogDescription>
+                  </DialogHeader>
+                  <div className="flex items-center space-x-2">
+                    <div className="grid flex-1 gap-2">
+                      <Label htmlFor="link" className="sr-only">
+                        Link
+                      </Label>
+                      <Input
+                        id="link"
+                        defaultValue="https://ergashev-s.vercel.app/"
+                        readOnly
+                      />
+                    </div>
+                    <Button type="submit" size="sm" className="px-3">
+                      <span className="sr-only">Nusxalash</span>
+                      <Copy />
+                    </Button>
+                  </div>
+                  <DialogFooter className="sm:justify-start">
+                    <DialogClose asChild>
+                      <Button type="button" variant="secondary">
+                        Yopish
+                      </Button>
+                    </DialogClose>
+                  </DialogFooter>
+                </DialogContent>
+              </Dialog>
+
+              <a
+                target="_blank"
+                href="https://github.com/ErgashevNur/rock-paper-scissors-lizar-"
+              >
                 <i className="fab fa-github text-white text-xl">
                   <FaGithub />
                 </i>
-              </Link>
+              </a>
             </div>
           </div>
 
           <div className="relative group w-[500px]">
-            <img src="/cofferoaster.jpg" alt="Image" className="h-auto" />
+            <img
+              src="/To-Do-List.jpg"
+              alt="Image"
+              className="h-auto rounded-xl"
+            />
             <div className="absolute inset-0 flex items-center justify-center space-x-4 opacity-0 group-hover:opacity-100 bg-black bg-opacity-50">
-              <Link href="">
+              <a
+                target="_blank"
+                href="https://github.com/ErgashevNur/Todo_List"
+              >
                 <i className="fas fa-eye text-white text-xl">
                   <FaEye />
                 </i>
-              </Link>
-              <Link>
-                <i className="fas fa-link text-white text-xl">
-                  <FaLink />
-                </i>
-              </Link>
-              <Link>
+              </a>
+              <Dialog>
+                <DialogTrigger asChild>
+                  <Button variant="">
+                    <FaLink />
+                  </Button>
+                </DialogTrigger>
+                <DialogContent className="sm:max-w-md">
+                  <DialogHeader>
+                    <DialogTitle>Linkni Nusxalash</DialogTitle>
+                    <DialogDescription>
+                      Bu men ochgan saytimning linki.
+                    </DialogDescription>
+                  </DialogHeader>
+                  <div className="flex items-center space-x-2">
+                    <div className="grid flex-1 gap-2">
+                      <Label htmlFor="link" className="sr-only">
+                        Link
+                      </Label>
+                      <Input
+                        id="link"
+                        defaultValue="https://github.com/ErgashevNur/Todo_List"
+                        readOnly
+                      />
+                    </div>
+                    <Button type="submit" size="sm" className="px-3">
+                      <span className="sr-only">Nusxalash</span>
+                      <Copy />
+                    </Button>
+                  </div>
+                  <DialogFooter className="sm:justify-start">
+                    <DialogClose asChild>
+                      <Button type="button" variant="secondary">
+                        Yopish
+                      </Button>
+                    </DialogClose>
+                  </DialogFooter>
+                </DialogContent>
+              </Dialog>
+              <a
+                target="_blank"
+                href="https://github.com/ErgashevNur/Todo_List"
+              >
                 <i className="fab fa-github text-white text-xl">
                   <FaGithub />
                 </i>
-              </Link>
+              </a>
             </div>
           </div>
 
           <div className="relative group w-[500px]">
-            <img src="/furniro.jpg" alt="Image" className="h-auto" />
+            <img src="/furniro.jpg" alt="Image" className="h-auto rounded-xl" />
             <div className="absolute inset-0 flex items-center justify-center space-x-4 opacity-0 group-hover:opacity-100 bg-black bg-opacity-50">
-              <Link>
+              <a target="_blank" href="https://furniro-store-tau.vercel.app/">
                 <i className="fas fa-eye text-white text-xl">
                   <FaEye />
                 </i>
-              </Link>
-              <Link href="">
-                <i className="fas fa-link text-white text-xl">
-                  <FaLink />
-                </i>
-              </Link>
-              <Link href="">
+              </a>
+
+              <Dialog>
+                <DialogTrigger asChild>
+                  <Button variant="">
+                    <FaLink />
+                  </Button>
+                </DialogTrigger>
+                <DialogContent className="sm:max-w-md">
+                  <DialogHeader>
+                    <DialogTitle>Linkni Nusxalash</DialogTitle>
+                    <DialogDescription>
+                      Bu men ochgan saytimning linki.
+                    </DialogDescription>
+                  </DialogHeader>
+                  <div className="flex items-center space-x-2">
+                    <div className="grid flex-1 gap-2">
+                      <Label htmlFor="link" className="sr-only">
+                        Link
+                      </Label>
+                      <Input
+                        id="link"
+                        defaultValue="https://furniro-store-tau.vercel.app/"
+                        readOnly
+                      />
+                    </div>
+                    <Button type="submit" size="sm" className="px-3">
+                      <span className="sr-only">Nusxalash</span>
+                      <Copy />
+                    </Button>
+                  </div>
+                  <DialogFooter className="sm:justify-start">
+                    <DialogClose asChild>
+                      <Button type="button" variant="secondary">
+                        Yopish
+                      </Button>
+                    </DialogClose>
+                  </DialogFooter>
+                </DialogContent>
+              </Dialog>
+
+              <a
+                target="_blank"
+                href="https://github.com/ErgashevNur/Furniro-Store"
+              >
                 <i className="fab fa-github text-white text-xl">
                   <FaGithub />
                 </i>
-              </Link>
+              </a>
             </div>
           </div>
 
           <div className="relative group w-[500px]">
-            <img src="/online-shop.jpg" alt="Image" className="h-auto" />
+            <img
+              src="/online-shop.jpg"
+              alt="Image"
+              className="h-auto rounded-xl"
+            />
             <div className="absolute inset-0 flex items-center justify-center space-x-4 opacity-0 group-hover:opacity-100 bg-black bg-opacity-50">
-              <Link href="">
+              <a
+                href="https://ergashevsonline-shop.vercel.app/"
+                target="_blank"
+              >
                 <i className="fas fa-eye text-white text-xl">
                   <FaEye />
                 </i>
-              </Link>
-              <Link href="">
-                <i className="fas fa-link text-white text-xl">
-                  <FaLink />
-                </i>
-              </Link>
-              <Link href="">
+              </a>
+
+              <Dialog>
+                <DialogTrigger asChild>
+                  <Button variant="">
+                    <FaLink />
+                  </Button>
+                </DialogTrigger>
+                <DialogContent className="sm:max-w-md">
+                  <DialogHeader>
+                    <DialogTitle>Linkni Nusxalash</DialogTitle>
+                    <DialogDescription>
+                      Bu men ochgan saytimning linki.
+                    </DialogDescription>
+                  </DialogHeader>
+                  <div className="flex items-center space-x-2">
+                    <div className="grid flex-1 gap-2">
+                      <Label htmlFor="link" className="sr-only">
+                        Link
+                      </Label>
+                      <Input
+                        id="link"
+                        defaultValue="https://ergashevsonline-shop.vercel.app/"
+                        readOnly
+                      />
+                    </div>
+                    <Button type="submit" size="sm" className="px-3">
+                      <span className="sr-only">Nusxalash</span>
+                      <Copy />
+                    </Button>
+                  </div>
+                  <DialogFooter className="sm:justify-start">
+                    <DialogClose asChild>
+                      <Button type="button" variant="secondary">
+                        Yopish
+                      </Button>
+                    </DialogClose>
+                  </DialogFooter>
+                </DialogContent>
+              </Dialog>
+
+              <a
+                target="_blank"
+                href="https://github.com/ErgashevNur/online_shop"
+              >
                 <i className="fab fa-github text-white text-xl">
                   <FaGithub />
                 </i>
-              </Link>
+              </a>
             </div>
           </div>
 
           <div className="relative group w-[500px]">
-            <img src="/Technologist.jpg" alt="Image" className="h-auto" />
+            <img
+              src="/Technologist.jpg"
+              alt="Image"
+              className="h-auto rounded-xl"
+            />
             <div className="absolute inset-0 flex items-center justify-center space-x-4 opacity-0 group-hover:opacity-100 bg-black bg-opacity-50">
-              <Link href="">
+              <a target="_blank" href="https://works-two-ashen.vercel.app/">
                 <i className="fas fa-eye text-white text-xl">
                   <FaEye />
                 </i>
-              </Link>
-              <Link href="">
-                <i className="fas fa-link text-white text-xl">
-                  <FaLink />
-                </i>
-              </Link>
-              <Link href="">
+              </a>
+              <Dialog>
+                <DialogTrigger asChild>
+                  <Button variant="">
+                    <FaLink />
+                  </Button>
+                </DialogTrigger>
+                <DialogContent className="sm:max-w-md">
+                  <DialogHeader>
+                    <DialogTitle>Linkni Nusxalash</DialogTitle>
+                    <DialogDescription>
+                      Bu men ochgan saytimning linki.
+                    </DialogDescription>
+                  </DialogHeader>
+                  <div className="flex items-center space-x-2">
+                    <div className="grid flex-1 gap-2">
+                      <Label htmlFor="link" className="sr-only">
+                        Link
+                      </Label>
+                      <Input
+                        id="link"
+                        defaultValue="https://works-two-ashen.vercel.app/"
+                        readOnly
+                      />
+                    </div>
+                    <Button type="submit" size="sm" className="px-3">
+                      <span className="sr-only">Nusxalash</span>
+                      <Copy />
+                    </Button>
+                  </div>
+                  <DialogFooter className="sm:justify-start">
+                    <DialogClose asChild>
+                      <Button type="button" variant="secondary">
+                        Yopish
+                      </Button>
+                    </DialogClose>
+                  </DialogFooter>
+                </DialogContent>
+              </Dialog>
+              <a target="_blank" href="https://github.com/ErgashevNur/Works">
                 <i className="fab fa-github text-white text-xl">
                   <FaGithub />
                 </i>
-              </Link>
+              </a>
             </div>
           </div>
 
           <div className="relative group w-[500px]">
-            <img src="/To-Do-List.jpg" alt="Image" className="h-auto" />
+            <img
+              src="/cofferoaster.jpg"
+              alt="Image"
+              className="h-auto rounded-xl"
+            />
             <div className="absolute inset-0 flex items-center justify-center space-x-4 opacity-0 group-hover:opacity-100 bg-black bg-opacity-50">
-              <Link href="">
+              <a
+                target="_blank"
+                href="https://coffeeroasters-eight-plum.vercel.app/index.html"
+              >
                 <i className="fas fa-eye text-white text-xl">
                   <FaEye />
                 </i>
-              </Link>
-              <Link href="">
-                <i className="fas fa-link text-white text-xl">
-                  <FaLink />
-                </i>
-              </Link>
-              <Link href="">
+              </a>
+
+              <Dialog>
+                <DialogTrigger asChild>
+                  <Button variant="">
+                    <FaLink />
+                  </Button>
+                </DialogTrigger>
+                <DialogContent className="sm:max-w-md">
+                  <DialogHeader>
+                    <DialogTitle>Linkni Nusxalash</DialogTitle>
+                    <DialogDescription>
+                      Bu men ochgan saytimning linki.
+                    </DialogDescription>
+                  </DialogHeader>
+                  <div className="flex items-center space-x-2">
+                    <div className="grid flex-1 gap-2">
+                      <Label htmlFor="link" className="sr-only">
+                        Link
+                      </Label>
+                      <Input
+                        id="link"
+                        defaultValue="https://coffeeroasters-eight-plum.vercel.app/index.html"
+                        readOnly
+                      />
+                    </div>
+                    <Button type="submit" size="sm" className="px-3">
+                      <span className="sr-only">Nusxalash</span>
+                      <Copy />
+                    </Button>
+                  </div>
+                  <DialogFooter className="sm:justify-start">
+                    <DialogClose asChild>
+                      <Button type="button" variant="secondary">
+                        Yopish
+                      </Button>
+                    </DialogClose>
+                  </DialogFooter>
+                </DialogContent>
+              </Dialog>
+
+              <a
+                target="_blank"
+                href="https://github.com/ErgashevNur/Coffeeroasters"
+              >
                 <i className="fab fa-github text-white text-xl">
                   <FaGithub />
                 </i>
-              </Link>
+              </a>
             </div>
           </div>
 
           <div className="relative group w-[500px]">
-            <img src="/User.jpg" alt="Image" className="h-auto" />
+            <img src="/User.jpg" alt="Image" className="h-auto rounded-xl" />
             <div className="absolute inset-0 flex items-center justify-center space-x-4 opacity-0 group-hover:opacity-100 bg-black bg-opacity-50">
-              <Link href="">
+              <a target="_blank" href="https://ergashev-s-user.vercel.app/">
                 <i className="fas fa-eye text-white text-xl">
                   <FaEye />
                 </i>
-              </Link>
-              <Link href="">
-                <i className="fas fa-link text-white text-xl">
-                  <FaLink />
-                </i>
-              </Link>
-              <Link href="">
+              </a>
+
+              <Dialog>
+                <DialogTrigger asChild>
+                  <Button variant="">
+                    <FaLink />
+                  </Button>
+                </DialogTrigger>
+                <DialogContent className="sm:max-w-md">
+                  <DialogHeader>
+                    <DialogTitle>Linkni Nusxalash</DialogTitle>
+                    <DialogDescription>
+                      Bu men ochgan saytimning linki.
+                    </DialogDescription>
+                  </DialogHeader>
+                  <div className="flex items-center space-x-2">
+                    <div className="grid flex-1 gap-2">
+                      <Label htmlFor="link" className="sr-only">
+                        Link
+                      </Label>
+                      <Input
+                        id="link"
+                        defaultValue="https://ergashev-s-user.vercel.app/"
+                        readOnly
+                      />
+                    </div>
+                    <Button type="submit" size="sm" className="px-3">
+                      <span className="sr-only">Nusxalash</span>
+                      <Copy />
+                    </Button>
+                  </div>
+                  <DialogFooter className="sm:justify-start">
+                    <DialogClose asChild>
+                      <Button type="button" variant="secondary">
+                        Yopish
+                      </Button>
+                    </DialogClose>
+                  </DialogFooter>
+                </DialogContent>
+              </Dialog>
+
+              <a target="_blank" href="https://github.com/ErgashevNur/User">
                 <i className="fab fa-github text-white text-xl">
                   <FaGithub />
                 </i>
-              </Link>
+              </a>
             </div>
-          </div> */}
+          </div>
         </div>
       </div>
     </div>
