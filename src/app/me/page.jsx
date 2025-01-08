@@ -17,7 +17,7 @@ export default function page() {
         <p className="animate-slide-top delay-900 mb-1">
           Dasturlash hayotimda 10+ loyihalar qilganman. Ulardan{" "}
           <span className="underline">real</span> hisoblangani hamda hozir ham
-          insonlarga manfaat beradiganlari 0+ hisoblanadi. Batafsil{" "}
+          insonlarga manfaat beradiganlari 3+ hisoblanadi. Batafsil{" "}
           <Link className="underline" href="/projects">
             loyihalar
           </Link>{" "}
