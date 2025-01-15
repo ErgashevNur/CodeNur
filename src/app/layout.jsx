@@ -5,7 +5,7 @@ import Footer from "@/components/Footer";
 export const metadata = {
   title: "MuhammadNurullohning portfolio sahifasi",
   description:
-    "MuhammadNurulloh haqida barcha ma'lumotlarni bu yerdan topishingiz mumkin. Barcha yangiliklar ilhomlandim.uz sahifasida",
+    "MuhammadNurulloh haqida barcha ma'lumotlarni bu yerdan topishingiz mumkin. Barcha yangiliklar codenur.uz sahifasida",
 };
 
 export default function RootLayout({ children }) {
