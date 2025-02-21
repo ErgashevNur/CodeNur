@@ -21,7 +21,7 @@ import { Label } from "@/components/ui/label";
 export default function NotFound() {
   return (
     <div className="">
-      <div className="container mx-auto px-10 mt-16 max-w-[1100px]">
+      {/* <div className="container mx-auto px-10 mt-16 max-w-[1100px]">
         <div className="flex flex-col max-w-[600px] mx-auto mb-20 sm:items-center">
           <div className="flex flex-col text-center">
             <h1 className="text-2xl mb-2 font-bold">
@@ -534,7 +534,22 @@ export default function NotFound() {
             </div>
           </div>
         </div>
+      </div> */}
+      {/* Tez kunda */}
+      <div className="flex h-screen flex-col items-center justify-center p-6">
+        <h1 className="text-7xl font-bold">404</h1>
+        <p className="text-2xl text-gray-400 mt-4 ">Oops!</p>
+        <p className="text-lg text-gray-400">
+          Tez kunda bu sahifa ishga tushadi!
+        </p>
+        <a
+          href="/"
+          className="mt-6 rounded-lg bg-purple-600 px-5 py-2 text-white transition hover:bg-purple-700"
+        >
+          Bosh sahifaga qaytish
+        </a>
       </div>
+      export default NotFound;
     </div>
   );
 }
