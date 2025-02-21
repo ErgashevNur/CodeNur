@@ -1,6 +1,6 @@
 import Social from "./Social";
 import { buttonVariants } from "./ui/button";
-import MeImg from "/public/For-work.jpg";
+import MeImg from "/public/mee.jpg";
 import Image from "next/image";
 import Link from "next/link";
 
