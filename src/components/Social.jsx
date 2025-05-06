@@ -125,7 +125,7 @@ export default function Social() {
                 size: "icon",
               })} scale-[80%]`}
               onClick={() => {
-                window?.open("/MuhammadNurulloh_rezyume..pdf", "_blank");
+                window?.open("/MuhammadNurulloh_rezyume.pdf", "_blank");
               }}
             >
               <BackpackIcon />
