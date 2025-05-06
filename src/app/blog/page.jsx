@@ -6,14 +6,14 @@ const posts = [
   {
     id: 1,
     title: "Badiiyat loyihasi: Onlayn kutubxona yaratish",
-    date: "2025-05-06",
+    date: "2025-04-03",
     slug: "badiiyat-loyihasi",
     content: `“Badiiyat” loyihasi — bu badiiy adabiyotga ixtisoslashgan zamonaviy onlayn kutubxona bo‘lib, foydalanuvchilarga asarlar o‘qish, mualliflar haqida ma'lumot olish va o‘z kutubxonasini shakllantirish imkonini beradi.`,
   },
   {
     id: 2,
-    title: "Matematika o‘rgatish Startap loyihasi: Al Jabr",
-    date: "2025-05-06",
+    title: "Al Jabr: Matematika o‘rgatish Startap loyihasi",
+    date: "2025-04-20",
     slug: "al-jabr-loyihasi",
     content: `“Al Jabr” kompaniyasidagi startap loyiha maktab o‘quvchilari uchun 1-11 sinflar oralig‘ida matematikani interaktiv tarzda o‘rgatishga mo‘ljallangan.`,
   },
@@ -28,7 +28,7 @@ export default function Blog() {
       <div className="grid md:grid-cols-2 gap-6">
         {posts.map((post) => (
           <Link key={post.id} href={`/blog/${post.slug}`}>
-            <div className="bg-white dark:bg-gray-800 shadow-md rounded-2xl p-5 hover:shadow-xl transition duration-300">
+            <div className="bg-white hover:bg-slate-100 dark:bg-gray-800 shadow-md rounded-2xl p-5 hover:shadow-xl transition duration-300">
               <p className="text-sm text-gray-500 dark:text-gray-400 mb-2">
                 {post.date}
               </p>
