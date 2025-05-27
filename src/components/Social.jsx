@@ -24,7 +24,7 @@ export default function Social() {
               })} scale-[80%]`}
               onClick={() => {
                 window?.open(
-                  "https://www.linkedin.com/in/muhammadnurulloh-ergashev-29144133b/",
+                  "https://www.linkedin.com/in/muhammadnurulloh",
                   "_blank"
                 );
               }}
@@ -125,7 +125,10 @@ export default function Social() {
                 size: "icon",
               })} scale-[80%]`}
               onClick={() => {
-                window?.open("/MuhammadNurulloh_rezyume.pdf", "_blank");
+                window?.open(
+                  "/Muhammadnurulloh_Ergashev_rezyume.pdf",
+                  "_blank"
+                );
               }}
             >
               <BackpackIcon />

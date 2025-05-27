@@ -28,23 +28,31 @@ const posts = [
   },
   {
     id: 2,
-    slug: "al-jabr-loyihasi",
-    title: "Al Jabr - 1-sinfdan 11-sinfgacha Matematika Platformasi",
+    slug: "chizlab",
+    title:
+      "O‘zbekistondagi ilk chizmachilik hamda dizaynga oid manbaalarni bir joyda to‘plovchi sayt.",
     date: "2025-05-06",
-    image: "/image copy .png",
-    tags: ["#React", "#TailwindCSS", "#Startap", "#Matematika", "#UIUX"],
+    image: "/image copy.png",
+    tags: [
+      "#Next",
+      "#TailwindCSS",
+      "#Startap",
+      "#Chizmachilik",
+      "#Dizayn",
+      "#UIUX",
+    ],
     content: `
-  "Al Jabr" — bu yangi startap loyiha bo‘lib, o‘quvchilarga 1-sinfdan 11-sinfgacha bo‘lgan matematikani onlayn tarzda o‘rgatishga qaratilgan interaktiv platformadir.
-  
-  Men hozirda ushbu platformani ishlab chiqishda frontend yo‘nalishda faol ishtirok etmoqdaman. Loyihaning asosiy jihatlari quyidagilardan iborat:
-  
-  - **Modulli tuzilma**: Har bir sinf uchun alohida darsliklar, mavzular, testlar va mashqlar bo‘limi yaratilgan.
-  - **UI/UX dizayn**: Tailwind CSS yordamida bolalarga qulay, sodda va tushunarli interfeyslar yaratilyapti. Har bir tugma, karta va sahifa dizayni yoshga mos ishlab chiqilmoqda.
-  - **Adaptiv komponentlar**: Komponentlar qayta ishlatiladigan qilib yozilgan, shuning uchun kod takrorlanmaydi va tizimni kengaytirish oson.
-  - **Statistik tizim**: Har bir o‘quvchining o‘z yutuqlari, o‘rganilgan mavzular va faoliyati haqida statistik ma’lumotlar ko‘rsatiladi.
-  - **Test va mashqlar**: Har bir dars yakunida testlar orqali o‘zlashtirish darajasi aniqlanadi va bu orqali foydalanuvchining bilim darajasi monitoring qilinadi.
-  
-  Bu loyiha orqali men startap muhitida qanday ishlash, komandada o‘zaro integratsiya qilish va kod sifati muhimligini chuqurroq anglab yetyapman. Ayniqsa, bolalar uchun ta’lim platformasi qilishda har bir detal muhim ahamiyatga ega ekanini amalda ko‘ryapman.
+Chizlab — O‘zbekistondagi ilk chizmachilik va dizayn manbalari markazi
+
+Chizlab — bu O‘zbekiston hududida chizmachilik, texnik grafikalar, dizayn va loyihalash sohalariga oid bilim, tajriba va amaliy resurslarni bir joyga jamlagan zamonaviy raqamli platformadir. Bizning asosiy maqsadimiz — o‘zbek tilida yuqori sifatli, foydali va amaliy ma’lumotlar taqdim etish orqali o‘quvchilar, talabalar, dizaynerlar, muhandislar hamda soha ixlosmandlarini birlashtirishdir.
+
+Saytda siz chizmachilik asoslari, geometrik va proyeksion chizmalar, CAD (Computer-Aided Design) dasturlari bo‘yicha qo‘llanmalar, grafik dizayn yondashuvlari, arxitektura chizmalari, mashinasozlik grafikasi va boshqa ko‘plab mavzularga oid interaktiv materiallar, darsliklar, videodarslar va PDF hujjatlarni topishingiz mumkin.
+
+Chizlab nafaqat o‘quvchilar uchun, balki tajribali mutaxassislar uchun ham kerakli manbadir. Platforma doimiy ravishda yangilanib, foydalanuvchilarga yangi maqolalar, misollar, amaliy topshiriqlar va ilg‘or dizayn texnikalarini taqdim etadi.
+
+Shuningdek, foydalanuvchilar o‘z ishlarini yuklash, baham ko‘rish va fikr almashish imkoniyatiga ega — bu esa Chizlab’ni bilim va tajriba almashinuvi uchun faol hamjamiyatga aylantiradi.
+
+Chizlab — o‘zbek tilida chizmachilik va dizayn sohasining yangi davri!
     `,
   },
 ];

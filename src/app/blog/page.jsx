@@ -12,10 +12,10 @@ const posts = [
   },
   {
     id: 2,
-    title: "Al Jabr: Matematika o‘rgatish Startap loyihasi",
-    date: "2025-04-20",
-    slug: "al-jabr-loyihasi",
-    content: `“Al Jabr” kompaniyasidagi startap loyiha maktab o‘quvchilari uchun 1-11 sinflar oralig‘ida matematikani interaktiv tarzda o‘rgatishga mo‘ljallangan.`,
+    title: "Chizlab: Chizmachilikga oid maqolalar sayti.",
+    date: "2025-03-20",
+    slug: "chizlab",
+    content: `“Chizlab loyhasi O'zbekistondagi yagona chizmachilikga oid maqolalarni ozida jamlagan sayt...`,
   },
 ];
 
@@ -25,7 +25,7 @@ export default function Blog() {
       <h1 className="text-4xl font-bold mb-8 text-center text-gray-800 dark:text-white">
         Blog Postlarim
       </h1>
-      <div className="grid md:grid-cols-2 gap-6">
+      <div className="grid md:grid-cols-2 gap-6 h-full">
         {posts.map((post) => (
           <Link key={post.id} href={`/blog/${post.slug}`}>
             <div className="bg-white hover:bg-slate-100 dark:bg-gray-800 shadow-md rounded-2xl p-5 hover:shadow-xl transition duration-300">
