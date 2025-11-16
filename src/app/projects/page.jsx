@@ -1,3 +1,4 @@
+import Link from "next/link";
 import { FaEye, FaLink, FaGithub } from "react-icons/fa";
 
 const projects = [
@@ -34,17 +35,23 @@ export default function Loyhalar() {
   return (
     <div>
       <h1 className="text-center font-bold text-4xl mt-14 mb-8">Loyhalarim</h1>
-      <section className="lg:grid grid-cols-2 md:px-4">
+      <section className="md:px-4">
         {projects.map((data) => (
           <div className="p-5">
             <h2 className="font-bold text-center text-lg md:text-left">
-              {data.h2}
+              <a
+                href={data.link}
+                target="_blank"
+                className="underline text-blue-700"
+              >
+                {data.h2}
+              </a>
             </h2>
             <p className="text-base text-center md:text-left">{data.p}</p>
-            <iframe
+            {/* <iframe
               src={data.link}
               className="w-full h-[400px] border rounded-lg"
-            ></iframe>
+            ></iframe> */}
           </div>
         ))}
       </section>
