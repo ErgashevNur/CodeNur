@@ -58,6 +58,8 @@
   }
   .theme {
     --animate-blink-cursor: blink-cursor 1.2s step-end infinite;
+    --animate-grid: grid 15s linear infinite;
+    --animate-meteor: meteor 5s linear infinite;
   }
 }
 
@@ -122,6 +124,27 @@
     opacity: 1;
     }
   50%, 100% {
+    opacity: 0;
+    }
+  }
+  @keyframes grid {
+  0% {
+    transform: translateY(-50%);
+    }
+  100% {
+    transform: translateY(0);
+    }
+  }
+  @keyframes meteor {
+  0% {
+    transform: rotate(var(--angle)) translateX(0);
+    opacity: 1;
+    }
+  70% {
+    opacity: 1;
+    }
+  100% {
+    transform: rotate(var(--angle)) translateX(-500px);
     opacity: 0;
     }
   }

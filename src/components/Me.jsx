@@ -7,11 +7,12 @@ import Link from "next/link";
 import { WordRotate } from "./ui/word-rotate";
 import { Highlighter } from "./ui/highlighter";
 import { HyperText } from "./ui/hyper-text";
+import { Skills } from "./Skills";
 
 export default function Me() {
   return (
     <section className="py-5 flex sm:items-center h-full">
-      <div className="container max-w-screen-lg mx-auto px-5">
+      <div className="container max-w-screen-lg mx-auto px-5 md:flex justify-between">
         <div>
           <div className="flex flex-col items-center mb-5 gap-3 sm:gap-6 sm:flex-row">
             <Image
@@ -28,7 +29,8 @@ export default function Me() {
                 MuhammadNurulloh
               </h2>
               <span className="text-slate-500 text-lg font-medium mb-2 sm:text-2xl">
-                <WordRotate words={["FrontEnd dasturchi", "ReactJs, NextJS"]} />
+                {/* <WordRotate words={["FrontEnd dasturchi", "ReactJs, NextJS"]} /> */}
+                FrontEnd dasturchi
               </span>
 
               <Social />
@@ -70,6 +72,10 @@ export default function Me() {
               </Link>
             </div>
           </div>
+        </div>
+
+        <div className="md:mt-48">
+          <Skills />
         </div>
       </div>
     </section>

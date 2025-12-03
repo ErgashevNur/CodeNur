@@ -1,22 +1,13 @@
 import Navbar from "./Navbar";
-import { TypingAnimation } from "./ui/typing-animation";
 
 export default function Header() {
   return (
     <header className="py-3">
       <div className="container max-w-screen-lg mx-auto px-5 flex items-center justify-between">
         <h1 className="font-medium text-2xl">
-          {/* Desktop uchun to'liq ism */}
-          <span className="hidden md:flex">
-            <TypingAnimation>MuhammadNurullohning Portfoliosi</TypingAnimation>
-          </span>
-
-          {/* Mobil uchun qisqa variant */}
-          <span className="flex md:hidden">
-            <TypingAnimation>MP</TypingAnimation>
-          </span>
+          M<span className="hidden md:inline sm:mr-2">uhammadNurullohning</span>
+          P<span className="hidden md:inline">ortfoliosi</span>
         </h1>
-
         <Navbar />
       </div>
     </header>

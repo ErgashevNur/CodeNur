@@ -25,7 +25,7 @@ export function HyperText({
     forwardMotionProps: true,
   });
 
-  const [displayText, setDisplayText] = useState(() => children.split(""));
+  const [displayText, setDisplayText] = useState(() => children?.split(""));
   const [isAnimating, setIsAnimating] = useState(false);
   const iterationCount = useRef(0);
   const elementRef = useRef(null);
@@ -69,7 +69,7 @@ export function HyperText({
   useEffect(() => {
     if (!isAnimating) return;
 
-    const maxIterations = children.length;
+    const maxIterations = children?.length;
     const startTime = performance.now();
     let animationFrameId;
 
@@ -80,7 +80,7 @@ export function HyperText({
       iterationCount.current = progress * maxIterations;
 
       setDisplayText((currentText) =>
-        currentText.map((letter, index) =>
+        currentText?.map((letter, index) =>
           letter === " "
             ? letter
             : index <= iterationCount.current
@@ -109,7 +109,7 @@ export function HyperText({
       {...props}
     >
       <AnimatePresence>
-        {displayText.map((letter, index) => (
+        {displayText?.map((letter, index) => (
           <motion.span
             key={index}
             className={cn("font-mono", letter === " " ? "w-3" : "")}
